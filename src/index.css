@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600&family=Covered+By+Your+Grace&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0c0b09;
+  --bg2: #111009;
+  --surface: #191712;
+  --surface2: #201e18;
+  --border: rgba(255,255,255,0.06);
+  --border-warm: rgba(200,160,80,0.22);
+  --text: #f0ebe3;
+  --muted: #7a7368;
+  --accent: #c8512a;
+  --accent-light: #e06840;
+  --gold: #c9a03c;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.022;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.7s cubic-bezier(0.22,0.61,0.36,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.masonry { columns: 3; column-gap: 1.2rem; }
+@media (max-width: 1024px) { .masonry { columns: 2; } }
+@media (max-width: 640px) { .masonry { columns: 1; } }
+
+/* ── Couleurs du Sud — warm ambient radial glow ───────────────── */
+section {
+  background-image:
+    radial-gradient(ellipse 70% 55% at 8% 92%, rgba(200,81,42,0.045) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 45% at 92% 6%,  rgba(201,160,60,0.035) 0%, transparent 58%);
+}
+
+/* ── Fondu enchaîné — edge dissolve (toutes sections sauf hero) ── */
+section:not(#hero) {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent 100%
+  );
+}
+
+/* ── Light Theme ───────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg: #f5f0e8;
+  --bg2: #ede8dc;
+  --surface: #faf7f0;
+  --surface2: #fff9f4;
+  --border: rgba(0,0,0,0.08);
+  --border-warm: rgba(200,140,60,0.35);
+  --text: #1a1510;
+  --muted: #7a6e60;
+  --accent: #c8512a;
+  --accent-light: #e06840;
+  --gold: #a07c28;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="light"] section:not(#hero),
+[data-theme="light"] footer {
+  background-color: var(--bg) !important;
+  color: var(--text);
+}
+
+/* LiquidButton — glass + orange aura in light mode */
+[data-theme="light"] .liquid-shadow {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(255, 255, 255, 0.38) !important;
+  box-shadow:
+    0 0 0 1px rgba(200, 81, 42, 0.28),
+    0 2px 10px rgba(0, 0, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05),
+    0 0 18px rgba(200, 81, 42, 0.22),
+    0 0 40px rgba(200, 81, 42, 0.08) !important;
+}
+
+/* Deepen muted text for contrast on cream */
+[data-theme="light"] .text-\[\#7a7368\] {
+  color: #4a3e32 !important;
+}
+
+/* Nav: hamburger bars + hover text invisible on cream → force dark */
+[data-theme="light"] .bg-\[\#f0ebe3\] {
+  background-color: var(--text) !important;
+}
+[data-theme="light"] .hover\:text-\[\#f0ebe3\]:hover {
+  color: var(--text) !important;
+}
+[data-theme="light"] .hover\:bg-white\/\[0\.06\]:hover {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] .bg-\[\#0c0b09\],
+[data-theme="light"] .bg-\[\#111009\] {
+  background-color: var(--bg) !important;
+}
+
+[data-theme="light"] .bg-\[\#191712\] {
+  background-color: var(--surface) !important;
+}
+
+[data-theme="light"] .bg-\[\#201e18\] {
+  background-color: var(--surface2) !important;
+}
+
+[data-theme="light"] .text-\[\#f0ebe3\] {
+  color: var(--text) !important;
+}
+
+[data-theme="light"] .text-\[\#7a7368\] {
+  color: var(--muted) !important;
+}
+
+[data-theme="light"] .border-white\/\[0\.06\] {
+  border-color: rgba(0,0,0,0.09) !important;
+}
+
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background-color: rgba(255,255,255,0.62) !important;
+  backdrop-filter: blur(8px) !important;
+  color: var(--text) !important;
+  border-color: rgba(200,140,60,0.28) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.92), inset 0 -1px 0 rgba(200,140,60,0.07) !important;
+}
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus {
+  border-color: rgba(200,81,42,0.55) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 0 0 3px rgba(200,81,42,0.10),
+    0 0 16px rgba(200,81,42,0.08) !important;
+}
+
+/* Light mode section warm glow — softer tones */
+[data-theme="light"] section {
+  background-image:
+    radial-gradient(ellipse 70% 55% at 8% 92%, rgba(200,81,42,0.06) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 45% at 92% 6%,  rgba(201,160,60,0.05) 0%, transparent 58%);
+}
+
+[data-theme="light"] nav {
+  color: var(--text);
+}
+
+[data-theme="light"] .bg-\[rgba\(12\,11\,9\,0\.94\)\] {
+  background-color: rgba(245,240,232,0.95) !important;
+}
+
+[data-theme="light"] .bg-\[rgba\(12\,11\,9\,0\.97\)\] {
+  background-color: rgba(245,240,232,0.97) !important;
+}

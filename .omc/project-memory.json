@@ -1,0 +1,278 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1780058435546,
+  "projectRoot": "/Users/olotbruno/isayka-react",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.2.6",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.6",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "8.0.12",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build 2>&1 | tail -10",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc -b && vite build",
+      "lint": "eslint .",
+      "preview": "vite preview"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1780058435411,
+      "keyFiles": [
+        "favicon.svg",
+        "icons.svg"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 4,
+      "lastAccessed": 1780058435411,
+      "keyFiles": [
+        "App.css",
+        "App.tsx",
+        "index.css",
+        "main.tsx"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1780058435423,
+      "keyFiles": [
+        "hero.png",
+        "react.svg",
+        "vite.svg"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 9,
+      "lastAccessed": 1780058435425,
+      "keyFiles": [
+        "About.tsx",
+        "Commande.tsx",
+        "Contact.tsx"
+      ]
+    },
+    "src/data": {
+      "path": "src/data",
+      "purpose": "Data files",
+      "fileCount": 2,
+      "lastAccessed": 1780058435426,
+      "keyFiles": [
+        "artworks.ts",
+        "news.ts"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 1,
+      "lastAccessed": 1780058435426,
+      "keyFiles": [
+        "utils.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/components/ui/parallax-showcase.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1780086592654,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1780086561529,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Lightbox.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1780085829853,
+      "type": "file"
+    },
+    {
+      "path": "src/index.css",
+      "accessCount": 5,
+      "lastAccessed": 1780085596463,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Commande.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1780086578860,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Gallery.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1780086596601,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 4,
+      "lastAccessed": 1780073196473,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ui/hero-section-2.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1780086587953,
+      "type": "file"
+    },
+    {
+      "path": "src/App.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780058451983,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "accessCount": 2,
+      "lastAccessed": 1780058501195,
+      "type": "file"
+    },
+    {
+      "path": "src/components/News.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780060868147,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ui/liquid-glass-button.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780071138080,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Contact.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780071178600,
+      "type": "file"
+    },
+    {
+      "path": "devis-isayka.html",
+      "accessCount": 2,
+      "lastAccessed": 1780090961914,
+      "type": "file"
+    },
+    {
+      "path": "src/main.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780058443736,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780058472065,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Expositions.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780060847901,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780070961152,
+      "type": "file"
+    },
+    {
+      "path": ".env.local",
+      "accessCount": 1,
+      "lastAccessed": 1780071191661,
+      "type": "file"
+    },
+    {
+      "path": "src/components/About.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780073219642,
+      "type": "file"
+    },
+    {
+      "path": "src/hooks/useReveal.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780085691020,
+      "type": "file"
+    },
+    {
+      "path": "src/contexts/ThemeContext.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780085691357,
+      "type": "file"
+    },
+    {
+      "path": "TODO.md",
+      "accessCount": 1,
+      "lastAccessed": 1780086732353,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
