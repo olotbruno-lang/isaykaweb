@@ -54,7 +54,7 @@ export function LiquidButton({
         shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(255,255,255,0.15),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.85),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.3),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.6),inset_0_0_6px_6px_rgba(255,255,255,0.06),inset_0_0_2px_2px_rgba(255,255,255,0.04),0_0_12px_rgba(200,81,42,0.15)]
         hover:shadow-[0_0_8px_rgba(200,81,42,0.2),0_4px_12px_rgba(0,0,0,0.15),inset_3px_3px_0.5px_-3px_rgba(255,255,255,0.2),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.8),inset_0_0_8px_8px_rgba(255,255,255,0.08),0_0_20px_rgba(200,81,42,0.2)]" />
       <div
-        className="absolute inset-0 -z-10 overflow-hidden rounded-full"
+        className="absolute inset-0 -z-10 overflow-hidden rounded-full backdrop-blur-md"
         style={{ backdropFilter: 'url("#container-glass")' }}
       />
       <span className="relative z-10 pointer-events-none">{children}</span>

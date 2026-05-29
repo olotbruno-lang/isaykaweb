@@ -145,7 +145,11 @@ export function ParallaxShowcase({ open, items, title, subtitle, onClose }: Para
             </div>
             <button
               onClick={onClose}
-              className="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-full border border-[#c8512a]/60 text-[#c8512a] hover:bg-[#c8512a] hover:text-white hover:border-[#c8512a] transition-all text-2xl leading-none"
+              className="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-full border border-[#c8512a]/70 text-[#c8512a] hover:bg-[#c8512a] hover:text-white hover:border-[#c8512a] transition-all text-2xl leading-none shadow-[0_0_12px_rgba(200,81,42,0.2)]"
+              style={{
+                backdropFilter: 'blur(8px)',
+                background: 'rgba(200,81,42,0.08)'
+              }}
               aria-label="Fermer et revenir à la galerie"
             >
               ×
