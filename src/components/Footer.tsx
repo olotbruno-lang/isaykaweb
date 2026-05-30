@@ -84,8 +84,8 @@ const SERVICES = [
 
 const SOCIALS = [
   { label: 'Instagram', href: 'https://www.instagram.com/isayka_draw/', icon: <IconInstagram /> },
-  { label: 'X (Twitter)', href: 'https://x.com/isaykadraw', icon: <IconX /> },
-  { label: 'Facebook', href: 'https://www.facebook.com/isaykadraw', icon: <IconFacebook /> },
+  { label: 'X (Twitter)', href: 'https://twitter.com/cariou_arnaud', icon: <IconX /> },
+  { label: 'Facebook', href: 'https://www.facebook.com/arnaud.cariou.5/', icon: <IconFacebook /> },
 ]
 
 /* ── Cookie policy content ────────────────────────────────────────── */
@@ -161,11 +161,11 @@ function MentionsContent() {
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Statut / SIRET : </strong>
-        [À COMPLÉTER — numéro SIRET, ou mention « dispensé d'immatriculation » selon le statut]
+        Microentrepreneur — SIRET à compléter
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Adresse : </strong>
-        [À COMPLÉTER — adresse postale ou « disponible sur demande »]
+        Var, PACA, France — Adresse postale disponible sur demande
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Contact : </strong>
