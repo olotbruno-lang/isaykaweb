@@ -68,7 +68,7 @@ export default function Commande() {
     }
   }
 
-  const inputCls = "w-full bg-[rgba(255,255,255,0.04)] backdrop-blur-sm border border-white/[0.09] shadow-[0_2px_6px_rgba(0,0,0,0.08),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.22),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.55),inset_0_0_6px_6px_rgba(255,255,255,0.04),0_0_10px_rgba(200,81,42,0.08)] text-[#f0ebe3] rounded-xl px-4 py-3 text-[0.88rem] font-light outline-none focus:border-[rgba(200,81,42,0.45)] focus:shadow-[0_2px_6px_rgba(0,0,0,0.08),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.25),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.55),inset_0_0_6px_6px_rgba(255,255,255,0.05),0_0_0_3px_rgba(200,81,42,0.10),0_0_18px_rgba(200,81,42,0.09)] transition-all duration-300 placeholder:text-[#4a4238]"
+  const inputCls = "w-full bg-[rgba(255,255,255,0.04)] backdrop-blur-sm border border-white/[0.09] shadow-[0_2px_6px_rgba(0,0,0,0.08),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.22),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.55),inset_0_0_6px_6px_rgba(255,255,255,0.04),0_0_10px_rgba(200,81,42,0.08)] text-[#f0ebe3] rounded-xl px-4 py-3 text-[0.88rem] font-light outline-none focus:border-[rgba(200,81,42,0.45)] focus:shadow-[0_2px_6px_rgba(0,0,0,0.08),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.25),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.55),inset_0_0_6px_6px_rgba(255,255,255,0.05),0_0_0_3px_rgba(200,81,42,0.10),0_0_24px_rgba(200,81,42,0.28),0_0_48px_rgba(200,81,42,0.14)] transition-all duration-300 placeholder:text-[#4a4238]"
   const labelCls = "block text-[0.7rem] font-medium tracking-[0.1em] uppercase text-[#7a7368] mb-1.5"
 
   return (
