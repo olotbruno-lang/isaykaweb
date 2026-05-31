@@ -35,7 +35,7 @@ const PILLARS = [
 const FAQ = [
   {
     q: 'Qui est Isayka Draw ?',
-    a: 'Arnaud Cariou, alias Isayka Draw, est un artiste peintre et graffeur basé dans le Var. Son univers navigue entre art urbain et pratique d\'atelier — avec une approche singulière qui emprunte autant à la culture street art qu\'aux traditions picturales. Sa pratique s\'étend de la toile au mur, de l\'intime au monumental.',
+    a: 'Je m\'appelle Arnaud Cariou, alias Isayka Draw. Mon univers navigue entre art urbain et pratique d\'atelier — une approche singulière qui emprunte autant à la culture street art qu\'aux traditions picturales. Ma pratique s\'étend de la toile au mur, de l\'intime au monumental.',
   },
   {
     q: 'Pourquoi faire appel à un artiste graffeur ?',
@@ -73,7 +73,7 @@ export default function WhyMe() {
               Pourquoi<br /><em className="italic text-[#c8512a]">Isayka ?</em>
             </h2>
             <p className="text-[0.95rem] text-[#7a7368] leading-[1.9]">
-              Entre la rue et l'atelier, entre la commande privée et la fresque publique — l'art d'Isayka ne choisit pas. Il traverse les formats, les supports et les contextes avec la même exigence : une œuvre qui parle, qui marque, qui reste.
+              Entre la rue et l'atelier, entre le privé et le public — je ne choisis pas mes terrains. Mon univers traverse les formats, les supports, les contextes avec la même exigence : une œuvre qui parle, qui marque, qui reste.
             </p>
           </div>
         </div>

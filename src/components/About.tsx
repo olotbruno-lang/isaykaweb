@@ -20,8 +20,8 @@ export default function About() {
             </h2>
             <div className="w-12 h-px bg-[#c8512a] my-8" />
             <div className="text-[0.95rem] text-[#7a7368] leading-[1.9] space-y-4">
-              <p>Isayka est artiste peintre et graffeur basé dans le Var. Son univers graphique navigue entre art urbain, peintures sur toile, fresques murales et customisation — toujours avec une signature reconnaissable et une palette affirmée.</p>
-              <p>Formé dans la rue avant la galerie, il intervient sur des projets privés et institutionnels dans toute la région PACA : décoration intérieure, fresques extérieures, commandes personnalisées et expositions.</p>
+              <p>Je suis artiste peintre et graffeur basé dans le Var. Mon univers navigue entre art urbain, peintures sur toile, fresques murales et customisation — signature reconnaissable, palette affirmée, trait immédiatement identifiable.</p>
+              <p>Formé dans la rue avant la galerie, j'interviens aussi bien sur des fresques extérieures de grand format que sur des commandes intimes, des événements ou des espaces institutionnels dans toute la région PACA.</p>
             </div>
             <div className="flex flex-wrap gap-2 mt-8">
               {tags.map(t => (
