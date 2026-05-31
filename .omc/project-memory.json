@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1780058435546,
+  "lastScanned": 1780259719915,
   "projectRoot": "/Users/olotbruno/isayka-react",
   "techStack": {
     "languages": [
@@ -42,7 +42,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "npm run build 2>&1 | tail -10",
+    "buildCommand": "cd /Users/olotbruno/isayka-react && npm run build 2>&1 | head -50",
     "testCommand": null,
     "lintCommand": "npm run lint",
     "devCommand": "npm run dev",
@@ -70,21 +70,36 @@
   },
   "customNotes": [],
   "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 6,
+      "lastAccessed": 1780259719884,
+      "keyFiles": [
+        "favicon.svg",
+        "icons.svg",
+        "index.html",
+        "robots.txt",
+        "sitemap.xml"
+      ]
+    },
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 2,
-      "lastAccessed": 1780058435411,
+      "fileCount": 4,
+      "lastAccessed": 1780259719887,
       "keyFiles": [
         "favicon.svg",
-        "icons.svg"
+        "icons.svg",
+        "robots.txt",
+        "sitemap.xml"
       ]
     },
     "src": {
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1780058435411,
+      "lastAccessed": 1780259719887,
       "keyFiles": [
         "App.css",
         "App.tsx",
@@ -92,11 +107,21 @@
         "main.tsx"
       ]
     },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 2,
+      "lastAccessed": 1780259719887,
+      "keyFiles": [
+        "index-BtHO4dr2.js",
+        "index-YVzWVapc.css"
+      ]
+    },
     "src/assets": {
       "path": "src/assets",
       "purpose": "Static assets",
       "fileCount": 3,
-      "lastAccessed": 1780058435423,
+      "lastAccessed": 1780259719888,
       "keyFiles": [
         "hero.png",
         "react.svg",
@@ -106,8 +131,8 @@
     "src/components": {
       "path": "src/components",
       "purpose": "UI components",
-      "fileCount": 9,
-      "lastAccessed": 1780058435425,
+      "fileCount": 11,
+      "lastAccessed": 1780259719888,
       "keyFiles": [
         "About.tsx",
         "Commande.tsx",
@@ -118,7 +143,7 @@
       "path": "src/data",
       "purpose": "Data files",
       "fileCount": 2,
-      "lastAccessed": 1780058435426,
+      "lastAccessed": 1780259719888,
       "keyFiles": [
         "artworks.ts",
         "news.ts"
@@ -128,7 +153,7 @@
       "path": "src/lib",
       "purpose": "Library code",
       "fileCount": 1,
-      "lastAccessed": 1780058435426,
+      "lastAccessed": 1780259719889,
       "keyFiles": [
         "utils.ts"
       ]
@@ -143,8 +168,8 @@
     },
     {
       "path": "src/components/Footer.tsx",
-      "accessCount": 7,
-      "lastAccessed": 1780086561529,
+      "accessCount": 10,
+      "lastAccessed": 1780152479959,
       "type": "file"
     },
     {
@@ -220,6 +245,12 @@
       "type": "file"
     },
     {
+      "path": ".env.local",
+      "accessCount": 2,
+      "lastAccessed": 1780152519622,
+      "type": "file"
+    },
+    {
       "path": "src/main.tsx",
       "accessCount": 1,
       "lastAccessed": 1780058443736,
@@ -241,12 +272,6 @@
       "path": "src/components/Hero.tsx",
       "accessCount": 1,
       "lastAccessed": 1780070961152,
-      "type": "file"
-    },
-    {
-      "path": ".env.local",
-      "accessCount": 1,
-      "lastAccessed": 1780071191661,
       "type": "file"
     },
     {
