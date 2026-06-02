@@ -42,7 +42,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "cd /Users/olotbruno/isayka-react && npm run build 2>&1 | head -50",
+    "buildCommand": "cd /Users/olotbruno/isayka-react && rm -rf dist .next build && npm run build 2>&1 | tail -10",
     "testCommand": null,
     "lintCommand": "npm run lint",
     "devCommand": "npm run dev",
@@ -161,15 +161,27 @@
   },
   "hotPaths": [
     {
+      "path": "src/components/Footer.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1780321332844,
+      "type": "file"
+    },
+    {
       "path": "src/components/ui/parallax-showcase.tsx",
       "accessCount": 10,
       "lastAccessed": 1780086592654,
       "type": "file"
     },
     {
-      "path": "src/components/Footer.tsx",
-      "accessCount": 10,
-      "lastAccessed": 1780152479959,
+      "path": "src/components/Commande.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1780321361522,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ui/hero-section-2.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1780263008397,
       "type": "file"
     },
     {
@@ -179,15 +191,15 @@
       "type": "file"
     },
     {
-      "path": "src/index.css",
-      "accessCount": 5,
-      "lastAccessed": 1780085596463,
+      "path": "src/App.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1780321341787,
       "type": "file"
     },
     {
-      "path": "src/components/Commande.tsx",
+      "path": "src/index.css",
       "accessCount": 5,
-      "lastAccessed": 1780086578860,
+      "lastAccessed": 1780085596463,
       "type": "file"
     },
     {
@@ -203,15 +215,15 @@
       "type": "file"
     },
     {
-      "path": "src/components/ui/hero-section-2.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1780086587953,
+      "path": ".env.local",
+      "accessCount": 3,
+      "lastAccessed": 1780262895084,
       "type": "file"
     },
     {
-      "path": "src/App.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1780058451983,
+      "path": "src/components/ui/liquid-glass-button.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1780321333005,
       "type": "file"
     },
     {
@@ -227,12 +239,6 @@
       "type": "file"
     },
     {
-      "path": "src/components/ui/liquid-glass-button.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1780071138080,
-      "type": "file"
-    },
-    {
       "path": "src/components/Contact.tsx",
       "accessCount": 2,
       "lastAccessed": 1780071178600,
@@ -245,9 +251,9 @@
       "type": "file"
     },
     {
-      "path": ".env.local",
+      "path": "src/components/Hero.tsx",
       "accessCount": 2,
-      "lastAccessed": 1780152519622,
+      "lastAccessed": 1780262994875,
       "type": "file"
     },
     {
@@ -266,12 +272,6 @@
       "path": "src/components/Expositions.tsx",
       "accessCount": 1,
       "lastAccessed": 1780060847901,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Hero.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1780070961152,
       "type": "file"
     },
     {
@@ -296,6 +296,12 @@
       "path": "TODO.md",
       "accessCount": 1,
       "lastAccessed": 1780086732353,
+      "type": "file"
+    },
+    {
+      "path": "src/components/SocialSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780262914478,
       "type": "file"
     }
   ],
