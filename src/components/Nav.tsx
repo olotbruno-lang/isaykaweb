@@ -43,7 +43,7 @@ export default function Nav() {
   const ThemeToggle = ({ className = '' }: { className?: string }) => (
     <button
       onClick={toggleTheme}
-      className={`w-8 h-8 flex items-center justify-center rounded-full text-[#7a7368] hover:text-[#f0ebe3] hover:bg-white/[0.06] transition-all ${className}`}
+      className={`w-8 h-8 flex items-center justify-center rounded-full text-[#7a7368] dark:text-[#7a7368] hover:text-[#1a1815] dark:hover:text-[#f0ebe3] hover:bg-[#1a1815]/5 dark:hover:bg-white/[0.06] transition-all ${className}`}
       aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
     >
       {theme === 'dark' ? <SunIcon /> : <MoonIcon />}

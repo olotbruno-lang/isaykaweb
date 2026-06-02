@@ -62,7 +62,7 @@ const HeroSection2 = React.forwardRef<HTMLElement, HeroSection2Props>(
         <div className="pt-24 md:pt-28" />
 
         {/* Main */}
-        <motion.main variants={containerVariants} className="py-4 md:py-8">
+        <motion.main className="py-4 md:py-8" variants={itemVariants}>
           <motion.h1
             className="font-display text-[clamp(3rem,9vw,8.5rem)] font-light leading-[0.92] tracking-tight"
             variants={itemVariants}
@@ -111,7 +111,7 @@ const HeroSection2 = React.forwardRef<HTMLElement, HeroSection2Props>(
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 border-t border-white/[0.06] pt-6">
             {contactInfo.map((item, i) => (
               <div key={i} className="flex items-center gap-2.5 text-[0.72rem] text-[#7a7368]">
-                <span className="text-[#c9a03c] flex-shrink-0">{item.icon}</span>
+                <span className="text-[#c8512a] flex-shrink-0">{item.icon}</span>
                 {item.href ? (
                   <a
                     href={item.href}

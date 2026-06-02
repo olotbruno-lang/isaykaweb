@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import emailjs from '@emailjs/browser'
 import { LiquidButton } from './ui/liquid-glass-button'
 
@@ -16,6 +16,7 @@ export default function Commande() {
   const [loading,   setLoading]   = useState(false)
   const [error,     setError]     = useState<string | null>(null)
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const form = e.target as HTMLFormElement
@@ -26,7 +27,7 @@ export default function Commande() {
 
     const SVC  = import.meta.env.VITE_EMAILJS_SERVICE_ID
     const TPL  = import.meta.env.VITE_EMAILJS_TEMPLATE_DEVIS
-    const TPLC = import.meta.env.VITE_EMAILJS_TEMPLATE_CONFIRM
+    const TPLC = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT
     const KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
     // Fallback mailto si EmailJS non configuré
@@ -54,7 +55,8 @@ export default function Commande() {
       if (TPLC) {
         await emailjs.send(SVC, TPLC, {
           to_name:  data.get('name')  as string,
-          to_email: data.get('email') as string,
+          email: data.get('email') as string,
+          message_content: `Type: ${data.get('type') || '—'}\nSurface: ${data.get('surface') || '—'}\nDimensions: ${data.get('dims') || '—'}\nBudget: ${data.get('budget') || '—'}\n\n${data.get('desc') || ''}`,
         }, { publicKey: KEY })
       }
       setSubmitted(true)
@@ -68,10 +70,56 @@ export default function Commande() {
     }
   }
 
-  const inputCls = "w-full bg-[rgba(255,255,255,0.35)] backdrop-blur-md border border-[rgba(200,81,42,0.25)] shadow-[0_2px_6px_rgba(0,0,0,0.08),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.5),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.05),inset_0_0_6px_6px_rgba(255,255,255,0.1),0_0_20px_rgba(200,81,42,0.15)] text-[#1a1815] dark:text-[#f0ebe3] rounded-xl px-4 py-3 text-[0.88rem] font-light outline-none focus:border-[rgba(200,81,42,0.45)] focus:shadow-[0_2px_6px_rgba(0,0,0,0.08),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.5),inset_-1px_-1px_1px_-0.5px_rgba(0,0,0,0.05),inset_0_0_6px_6px_rgba(255,255,255,0.1),0_0_0_3px_rgba(200,81,42,0.10),0_0_24px_rgba(200,81,42,0.28),0_0_48px_rgba(200,81,42,0.14)] transition-all duration-300 placeholder:text-[#8b7863] dark:placeholder:text-[#a89980]"
+  const inputCls = "w-full bg-white/[0.6] dark:bg-white/[0.08] backdrop-blur-[20px] border border-[#c8512a]/40 dark:border-[#c8512a]/35 text-[#1a1815] dark:text-[#f0ebe3] rounded-xl px-4 py-3 text-[0.88rem] font-light outline-none focus:border-[#c8512a]/70 focus:ring-2 focus:ring-[#c8512a]/40 transition-all duration-200 placeholder:text-[#8b7863] dark:placeholder:text-[#a89980] shadow-[0_0_30px_rgba(200,81,42,0.25),inset_0_0_1px_rgba(200,81,42,0.2),inset_1px_1px_2px_rgba(255,255,255,0.3),inset_-1px_-1px_2px_rgba(0,0,0,0.08)]"
+  const selectCls = inputCls + " appearance-none cursor-pointer bg-[image:url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%221a1815%22 stroke-width=%222%22%3e%3cpath d=%22M6 9l6 6 6-6%22/%3e%3c/svg%3e')] dark:bg-[image:url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22f0ebe3%22 stroke-width=%222%22%3e%3cpath d=%22M6 9l6 6 6-6%22/%3e%3c/svg%3e')] bg-no-repeat bg-right bg-origin-content pr-10"
   const labelCls = "block text-[0.7rem] font-medium tracking-[0.1em] uppercase text-[#7a7368] mb-1.5"
 
   return (
+    <>
+      <style>{`
+        select#type {
+          color-scheme: light;
+        }
+        select#type option {
+          color: #1a1815 !important;
+          background-color: #ffffff !important;
+          padding: 8px 4px;
+        }
+        select#type option[value=""] {
+          color: #c8512a !important;
+        }
+        select#type option:checked {
+          color: #1a1815 !important;
+          background: linear-gradient(rgba(200, 81, 42, 0.2), rgba(200, 81, 42, 0.2)) !important;
+          background-color: #f5f5f5 !important;
+        }
+
+        /* Light mode blur + enhanced glow */
+        @media (prefers-color-scheme: light) {
+          input[class*="bg-"], textarea[class*="bg-"], select[class*="bg-"] {
+            box-shadow: 0 0 25px rgba(200, 81, 42, 0.2), 0 0 50px rgba(200, 81, 42, 0.1), inset 0 0 1px rgba(200, 81, 42, 0.15) !important;
+            filter: blur(0) !important;
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          select#type {
+            color-scheme: dark;
+          }
+          select#type option {
+            color: #f0ebe3 !important;
+            background-color: #191712 !important;
+          }
+          select#type option[value=""] {
+            color: #c8512a !important;
+          }
+          select#type option:checked {
+            color: #f0ebe3 !important;
+            background: linear-gradient(rgba(200, 81, 42, 0.3), rgba(200, 81, 42, 0.3)) !important;
+            background-color: #2a2622 !important;
+          }
+        }
+      `}</style>
     <section id="commande" className="py-28 bg-[#111009]">
       <div className="max-w-[min(1300px,100%-4rem)] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-20 items-start">
@@ -89,11 +137,11 @@ export default function Commande() {
             </p>
             <div className="flex flex-col gap-4">
               {TYPES.map(t => (
-                <div key={t.title} className="flex items-center gap-4 p-4 border border-white/[0.06] rounded-xl bg-[#191712] hover:border-[#c8512a]/50 hover:bg-[#201e18] hover:translate-x-1 transition-all duration-300 cursor-default">
+                <div key={t.title} className="flex items-center gap-4 p-4 border border-[#c8512a]/25 rounded-xl bg-white/[0.6] dark:bg-white/[0.08] backdrop-blur-md hover:border-[#c8512a]/50 dark:hover:border-[#c8512a]/60 hover:bg-white/[0.75] dark:hover:bg-white/[0.12] hover:translate-x-1 transition-all duration-300 cursor-default shadow-[0_0_15px_rgba(200,81,42,0.1),inset_1px_1px_2px_rgba(255,255,255,0.15),inset_-1px_-1px_2px_rgba(0,0,0,0.08)]">
                   <span className="flex-shrink-0 text-[#c8512a]">{t.icon}</span>
                   <div>
-                    <strong className="block text-[0.85rem] font-medium tracking-wide mb-0.5">{t.title}</strong>
-                    <span className="text-[0.76rem] text-[#7a7368]">{t.desc}</span>
+                    <strong className="block text-[0.85rem] font-medium tracking-wide mb-0.5 text-[#1a1815] dark:text-white">{t.title}</strong>
+                    <span className="text-[0.76rem] text-[#8b7863] dark:text-[#7a7368]">{t.desc}</span>
                   </div>
                 </div>
               ))}
@@ -118,7 +166,7 @@ export default function Commande() {
                   ))}
                   <div>
                     <label htmlFor="type" className={labelCls}>Type de projet *</label>
-                    <select id="type" name="type" required className={inputCls + ' cursor-pointer'}>
+                    <select id="type" name="type" required className={selectCls}>
                       <option value="">Choisir…</option>
                       <option>Graffiti / Street Art</option>
                       <option>Peinture sur toile</option>
@@ -145,10 +193,13 @@ export default function Commande() {
                     <textarea id="desc" name="desc" required rows={4} placeholder="Décrivez votre projet, ambiance souhaitée, couleurs, références…" className={inputCls + ' resize-y'} />
                   </div>
                 </div>
+
                 {error && (
                   <p className="mt-4 text-[0.82rem] text-red-400 text-center">{error}</p>
                 )}
-                <div className="mt-4">
+
+                {/* Actions */}
+                <div className="mt-8">
                   <LiquidButton size="lg" className="w-full justify-center" type="submit" disabled={loading}>
                     {loading ? 'Envoi en cours…' : submitted ? '✓ Demande envoyée !' : 'Envoyer ma demande →'}
                   </LiquidButton>
@@ -159,5 +210,6 @@ export default function Commande() {
         </div>
       </div>
     </section>
+    </>
   )
 }

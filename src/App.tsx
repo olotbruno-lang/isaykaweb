@@ -6,9 +6,11 @@ import Gallery from './components/Gallery'
 import About from './components/About'
 import WhyMe from './components/WhyMe'
 import Commande from './components/Commande'
+import ProjectWorkflow from './components/ProjectWorkflow'
 import Expositions from './components/Expositions'
 import News from './components/News'
 import Contact from './components/Contact'
+import SocialSection from './components/SocialSection'
 import Footer from './components/Footer'
 
 function AppContent() {
@@ -22,9 +24,11 @@ function AppContent() {
         <About />
         <WhyMe />
         <Commande />
+        <ProjectWorkflow />
         <Expositions />
         <News />
         <Contact />
+        <SocialSection />
       </main>
       <Footer />
     </div>

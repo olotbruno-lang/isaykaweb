@@ -66,11 +66,9 @@ function LegalModal({ title, children, onClose }: LegalModalProps) {
 const SERVICES = [
   { label: 'Pro', href: '#commande' },
   { label: 'Façades', href: '#commande' },
-  { label: 'Intérieurs', href: '#commande' },
-  { label: 'Enfance / Ado', href: '#commande' },
   { label: 'Médias', href: '#commande' },
   { label: 'Tableaux', href: '#gallery' },
-  { label: "Déroulement d'un projet", href: '#commande' },
+  { label: "Déroulement d'un projet", href: '#comment-ca-marche' },
 ]
 
 
@@ -152,7 +150,7 @@ function MentionsContent() {
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Statut / SIRET : </strong>
-        Microentrepreneur — SIRET à compléter
+        Microentrepreneur — SIRET: [À obtenir auprès de l'INSEE]
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Adresse : </strong>
