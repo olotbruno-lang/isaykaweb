@@ -91,7 +91,7 @@ function CookieContent() {
       <p>Conformément à la directive ePrivacy et au RGPD, aucun consentement n'est requis pour ces cookies techniques essentiels.</p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Contact : </strong>
-        <a href="mailto:contact@isayka.fr" className="text-[#c8512a] hover:underline">contact@isayka.fr</a>
+        <a href="mailto:isaykadraw@gmail.com" className="text-[#c8512a] hover:underline">isaykadraw@gmail.com</a>
       </p>
     </>
   )
@@ -104,7 +104,7 @@ function PrivacyContent() {
       <p>
         <strong style={{ color: 'var(--text)' }}>Responsable du traitement : </strong>
         Arnaud Cariou (Isayka Draw) — Var, PACA, France —{' '}
-        <a href="mailto:contact@isayka.fr" className="text-[#c8512a] hover:underline">contact@isayka.fr</a>
+        <a href="mailto:isaykadraw@gmail.com" className="text-[#c8512a] hover:underline">isaykadraw@gmail.com</a>
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Données collectées : </strong>
@@ -125,7 +125,7 @@ function PrivacyContent() {
       <p>
         <strong style={{ color: 'var(--text)' }}>Vos droits (RGPD) : </strong>
         Accès, rectification, suppression, limitation, portabilité. Pour exercer vos droits :{' '}
-        <a href="mailto:contact@isayka.fr" className="text-[#c8512a] hover:underline">contact@isayka.fr</a>
+        <a href="mailto:isaykadraw@gmail.com" className="text-[#c8512a] hover:underline">isaykadraw@gmail.com</a>
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Réclamation : </strong>
@@ -158,7 +158,7 @@ function MentionsContent() {
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Contact : </strong>
-        <a href="mailto:contact@isayka.fr" className="text-[#c8512a] hover:underline">contact@isayka.fr</a>
+        <a href="mailto:isaykadraw@gmail.com" className="text-[#c8512a] hover:underline">isaykadraw@gmail.com</a>
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Directeur de la publication : </strong>
@@ -257,7 +257,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="border-t border-white/[0.06] pt-7 flex items-center justify-between flex-wrap gap-4">
             <p className="text-[0.7rem] text-[#7a7368]">© 2026 Isayka · Tous droits réservés · Var, PACA</p>
-            <p className="text-[0.7rem] text-[#3a3530]">contact@isayka.fr</p>
+            <p className="text-[0.7rem] text-[#3a3530]">isaykadraw@gmail.com</p>
           </div>
         </div>
       </footer>

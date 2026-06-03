@@ -39,7 +39,7 @@ export default function Commande() {
       }
       const lines: string[] = []
       data.forEach((val, key) => { if (val) lines.push(`${labels[key] ?? key}: ${val}`) })
-      window.location.href = `mailto:contact@isayka.fr?subject=${encodeURIComponent('Demande de devis — Isayka Draw')}&body=${encodeURIComponent(lines.join('\n'))}`
+      window.location.href = `mailto:isaykadraw@gmail.com?subject=${encodeURIComponent('Demande de devis — Isayka Draw')}&body=${encodeURIComponent(lines.join('\n'))}`
       setSubmitted(true)
       setTimeout(() => setSubmitted(false), 5000)
       form.reset()
@@ -64,7 +64,7 @@ export default function Commande() {
       form.reset()
     } catch (err) {
       console.error('EmailJS:', err)
-      setError('Erreur d\'envoi. Contactez directement contact@isayka.fr')
+      setError('Erreur d\'envoi. Contactez directement isaykadraw@gmail.com')
     } finally {
       setLoading(false)
     }

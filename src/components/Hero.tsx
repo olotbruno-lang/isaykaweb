@@ -24,7 +24,7 @@ const MailIcon = () => (
 const contactInfo = [
   { icon: <LocationIcon />, value: 'Var · PACA, France', href: 'https://maps.google.com/maps?q=Var,+PACA,+France' },
   { icon: <InstagramIcon />, value: '@isayka_draw',       href: 'https://www.instagram.com/isayka_draw/' },
-  { icon: <MailIcon />,      value: 'contact@isayka.fr',  href: 'mailto:contact@isayka.fr' },
+  { icon: <MailIcon />,      value: 'isaykadraw@gmail.com',  href: 'mailto:isaykadraw@gmail.com' },
 ]
 
 export default function Hero() {
