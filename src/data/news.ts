@@ -12,6 +12,16 @@ export interface NewsItem {
 
 export const NEWS: NewsItem[] = [
   {
+    id: 7,
+    title: "Exposition Origines",
+    description: "Une exposition hors du temps en Côtes-d'Armor, où les origines seront transmises à travers un style unique. Vernissage mardi 16 Juin à 18h.",
+    image: "/images/news/exposition-origines.jpg",
+    eventDate: "2026-06-15",
+    location: "Salle d'exposition Anatole Le Braz, Penwenan (22710)",
+    badge: "Exposition",
+    section: 'expo',
+  },
+  {
     id: 6,
     title: "Live painting – Salon des Arts Contemporains de Hyères",
     description: "Live painting sur toile lors du premier salon des arts contemporains, au forum du casino de Hyères.",
