@@ -42,7 +42,7 @@
     "runtime": null
   },
   "build": {
-    "buildCommand": "cd /Users/olotbruno/isayka-react && npm run build 2>&1 | tail -20",
+    "buildCommand": "npm run build 2>&1 | tail -20",
     "testCommand": null,
     "lintCommand": "npm run lint",
     "devCommand": "npm run dev",
@@ -173,6 +173,12 @@
       "type": "file"
     },
     {
+      "path": "src/App.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1780661765617,
+      "type": "file"
+    },
+    {
       "path": "src/components/Commande.tsx",
       "accessCount": 9,
       "lastAccessed": 1780321361522,
@@ -188,12 +194,6 @@
       "path": "src/components/Lightbox.tsx",
       "accessCount": 6,
       "lastAccessed": 1780085829853,
-      "type": "file"
-    },
-    {
-      "path": "src/App.tsx",
-      "accessCount": 6,
-      "lastAccessed": 1780321341787,
       "type": "file"
     },
     {
@@ -302,6 +302,12 @@
       "path": "src/components/SocialSection.tsx",
       "accessCount": 1,
       "lastAccessed": 1780262914478,
+      "type": "file"
+    },
+    {
+      "path": "src/components/SEO/SEOMeta.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780661783243,
       "type": "file"
     }
   ],

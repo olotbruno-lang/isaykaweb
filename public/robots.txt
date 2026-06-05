@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://isayka.fr/sitemap.xml
+Sitemap: https://isaykadraw.com/sitemap.xml
+
+# Disallow admin/private pages (if any)
+# Disallow: /admin/

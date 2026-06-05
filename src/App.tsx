@@ -1,5 +1,7 @@
+import { HelmetProvider } from 'react-helmet-async'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { useReveal } from './hooks/useReveal'
+import SEOMeta from './components/SEO/SEOMeta'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
@@ -17,6 +19,7 @@ function AppContent() {
   useReveal()
   return (
     <div className="bg-[var(--bg)] text-[var(--text)] min-h-screen font-body transition-colors duration-300">
+      <SEOMeta />
       <Nav />
       <main>
         <Hero />
@@ -37,8 +40,10 @@ function AppContent() {
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </HelmetProvider>
   )
 }
