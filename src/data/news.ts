@@ -12,6 +12,16 @@ export interface NewsItem {
 
 export const NEWS: NewsItem[] = [
   {
+    id: 8,
+    title: "Exposition — Galerie 83",
+    description: "Exposition Isayka à la Galerie 83 à Flayosc. Vernissage samedi 18 juillet à 18h. Finissage dimanche 26 juillet à 12h.",
+    image: "/images/news/exposition-flayosc.jpg",
+    eventDate: "2026-07-18",
+    location: "Galerie 83, 83780 Flayosc",
+    badge: "Exposition",
+    section: 'expo',
+  },
+  {
     id: 7,
     title: "Exposition Origines",
     description: "Une exposition hors du temps en Côtes-d'Armor, où les origines seront transmises à travers un style unique. Vernissage mardi 16 Juin à 18h.",
