@@ -5,6 +5,7 @@ import SEOMeta from './components/SEO/SEOMeta'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
+import Atelier from './components/Atelier'
 import About from './components/About'
 import WhyMe from './components/WhyMe'
 import Commande from './components/Commande'
@@ -24,6 +25,7 @@ function AppContent() {
       <main>
         <Hero />
         <Gallery />
+        <Atelier />
         <About />
         <WhyMe />
         <Commande />
