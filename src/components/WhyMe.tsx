@@ -18,7 +18,7 @@ const PILLARS = [
       </svg>
     ),
     title: 'Rue, atelier, et tout entre les deux',
-    body: 'Formé dans la rue avant la galerie, Isayka intervient aussi bien sur des fresques extérieures de grand format que sur des commandes intimes, des événements ou des espaces institutionnels.',
+    body: 'Formé dans la rue avant la galerie, j\'interviens aussi bien sur des fresques extérieures de grand format que sur des commandes intimes, des événements ou des espaces institutionnels.',
   },
   {
     icon: (
