@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
   <rect width="192" height="192" fill="#ffffff"/>
-  <text x="96" y="130" font-family="'Segoe Print', 'Comic Sans MS', cursive, handwriting" font-size="105" font-weight="900" text-anchor="middle" fill="#000000" letter-spacing="-4">
+  <text x="96" y="135" font-family="'Segoe Print', 'Marker Felt', cursive" font-size="120" font-weight="900" text-anchor="middle" fill="#000000" letter-spacing="-6" stroke="none">
     iSAYKA
   </text>
 </svg>
