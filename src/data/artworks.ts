@@ -205,18 +205,6 @@ export const ARTWORKS: Artwork[] = [
     visible: true
   },
   {
-    id: 45,
-    title: "Art Is My Way",
-    description: "Message artistique",
-    category: "Peintures",
-    technique: null,
-    dimensions: "20x30cm",
-    year: null,
-    image: "/images/img_5157_1764234158212.jpeg",
-    isAvailable: true,
-    visible: true
-  },
-  {
     id: 46,
     title: "Mythe de Draguignan",
     description: "Cr\u00e9ation fantastique du dragon iconique de la ville de Draguignan. Avec la tour de l'Horloge et \u00e9l\u00e9ments proven\u00e7aux",
