@@ -157,30 +157,6 @@ export const ARTWORKS: Artwork[] = [
     visible: true
   },
   {
-    id: 36,
-    title: "Gardienne de la Terre",
-    description: "Peinture sur toile d'une tortue portant la Terre, message \u00e9cologique",
-    category: "Peintures",
-    technique: null,
-    dimensions: "20x20cm",
-    year: null,
-    image: "/images/img_4223_1758287584537.jpeg",
-    isAvailable: false,
-    visible: true
-  },
-  {
-    id: 37,
-    title: "\u0152il de Serpent",
-    description: "Dessin d'un \u0153il de serpent sur toile",
-    category: "Peintures",
-    technique: null,
-    dimensions: "20x20cm",
-    year: null,
-    image: "/images/img_4248_1758287584537.jpeg",
-    isAvailable: false,
-    visible: true
-  },
-  {
     id: 38,
     title: "Pieuvre sur Toile",
     description: "Peinture sur toile repr\u00e9sentant une pieuvre",
