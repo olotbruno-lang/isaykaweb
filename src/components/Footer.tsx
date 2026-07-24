@@ -150,7 +150,7 @@ function MentionsContent() {
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Statut / SIRET : </strong>
-        Microentrepreneur — SIRET: [À obtenir auprès de l'INSEE]
+        Microentrepreneur — SIRET: 92853212600010
       </p>
       <p>
         <strong style={{ color: 'var(--text)' }}>Adresse : </strong>
@@ -176,6 +176,18 @@ function MentionsContent() {
       <p>
         <strong style={{ color: 'var(--text)' }}>Crédits : </strong>
         Conception, design et œuvres — Isayka Draw.
+      </p>
+      <p>
+        <strong style={{ color: 'var(--text)' }}>Responsable du traitement des données : </strong>
+        Arnaud Cariou — isaykadraw@gmail.com
+      </p>
+      <p>
+        <strong style={{ color: 'var(--text)' }}>Limitations de responsabilité : </strong>
+        Ce site est fourni "en l'état". Isayka Draw ne garantit pas l'absence d'erreurs, d'interruptions ou de virus. L'accès et l'utilisation du site sont à vos seuls risques et périls.
+      </p>
+      <p>
+        <strong style={{ color: 'var(--text)' }}>Liens externes : </strong>
+        Isayka Draw n'est pas responsable du contenu des sites externes liés depuis ce site. Tout lien vers des sites tiers n'implique pas d'approbation de leur contenu.
       </p>
     </>
   )
