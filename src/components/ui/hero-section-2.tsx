@@ -14,7 +14,8 @@ interface HeroSection2Props extends Omit<React.HTMLAttributes<HTMLElement>, 'tit
   subtitle: string
   callToAction: { text: string; href: string }
   secondaryAction?: { text: string; href: string }
-  backgroundImage: string
+  backgroundImage?: string
+  backgroundImages?: { src: string; alt: string }[]
   contactInfo: ContactItem[]
 }
 
@@ -32,8 +33,14 @@ const itemVariants: Variants = {
 }
 
 const HeroSection2 = React.forwardRef<HTMLElement, HeroSection2Props>(
-  ({ className, slogan, title, subtitle, callToAction, secondaryAction, backgroundImage, contactInfo, ...props }, ref) => {
+  ({ className, slogan, title, subtitle, callToAction, secondaryAction, backgroundImage, backgroundImages, contactInfo, ...props }, ref) => {
     const [isDesktop, setIsDesktop] = useState(false)
+    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [isHovering, setIsHovering] = useState(false)
+
+    const images = backgroundImages || (backgroundImage ? [{ src: backgroundImage, alt: 'Hero' }] : [])
+    const hasCarousel = (backgroundImages?.length || 0) > 1
+
     useEffect(() => {
       const mq = window.matchMedia('(min-width: 768px)')
       setIsDesktop(mq.matches)
@@ -41,6 +48,16 @@ const HeroSection2 = React.forwardRef<HTMLElement, HeroSection2Props>(
       mq.addEventListener('change', handler)
       return () => mq.removeEventListener('change', handler)
     }, [])
+
+    useEffect(() => {
+      if (!hasCarousel || isHovering) return
+
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % images.length)
+      }, 5000)
+
+      return () => clearInterval(interval)
+    }, [hasCarousel, isHovering, images.length])
 
     return (
     <motion.section
@@ -130,17 +147,53 @@ const HeroSection2 = React.forwardRef<HTMLElement, HeroSection2Props>(
         </motion.footer>
       </div>
 
-      {/* ── Right — image with clip-path reveal ──────────────── */}
+      {/* ── Right — image carousel ──────────────────────────────── */}
       <motion.div
-        className="w-full min-h-[45vh] md:w-1/2 md:min-h-full lg:w-2/5 bg-cover bg-center bg-[center_20%]"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          filter: 'saturate(0.78) contrast(1.08)',
-        }}
+        className="relative w-full min-h-[45vh] md:w-1/2 md:min-h-full lg:w-2/5 overflow-hidden"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
         initial={{ clipPath: isDesktop ? 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
         animate={{ clipPath: isDesktop ? 'polygon(18% 0, 100% 0, 100% 100%, 0% 100%)' : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
         transition={{ duration: 1.35, ease: 'easeOut' }}
-      />
+      >
+        {/* Carousel images */}
+        {images.map((image, index) => (
+          <motion.div
+            key={index}
+            className="absolute inset-0"
+            style={{
+              filter: 'saturate(0.78) contrast(1.08)',
+            }}
+            animate={{
+              x: index === currentImageIndex ? 0 : index < currentImageIndex ? '-100%' : '100%',
+              opacity: index === currentImageIndex ? 1 : 0,
+            }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        ))}
+
+        {/* Pagination dots - carousel only */}
+        {hasCarousel && (
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentImageIndex ? 'bg-[#c8512a] w-6' : 'bg-white/50 hover:bg-white/80'
+                }`}
+                aria-label={`Aller à l'image ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+      </motion.div>
 
       {/* Gradient fade — seam between panels (desktop only) */}
       <div className="absolute top-0 right-[40%] bottom-0 w-28 z-[1] hidden lg:block pointer-events-none" style={{ background: 'linear-gradient(to right, var(--bg), transparent)' }} />

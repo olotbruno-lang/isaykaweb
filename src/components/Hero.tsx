@@ -34,6 +34,13 @@ const contactInfo = [
   { icon: <MailIcon />,      value: 'isaykadraw@gmail.com',  href: 'mailto:isaykadraw@gmail.com' },
 ]
 
+const CAROUSEL_IMAGES = [
+  { src: '/images/hero/hero-1.jpg', alt: 'Tour avec grenouille - illustration colorée' },
+  { src: '/images/hero/hero-2.jpg', alt: 'Fresque murale extérieure - street art coloré' },
+  { src: '/images/hero/hero-3.jpg', alt: 'Travail en studio - Isayka avec ses peintures' },
+  { src: '/images/hero/hero-4.jpg', alt: 'Portfolio - galerie de peintures' },
+]
+
 export default function Hero() {
   return (
     <HeroSection2
@@ -50,7 +57,7 @@ export default function Hero() {
       subtitle="Fresques murales, peintures, céramiques et mixed media — une œuvre ancrée dans le sud, entre graffs et galerie."
       callToAction={{ text: 'Voir la galerie', href: '#gallery' }}
       secondaryAction={{ text: 'Commande sur mesure', href: '#commande' }}
-      backgroundImage="/images/hero.jpeg"
+      backgroundImages={CAROUSEL_IMAGES}
       contactInfo={contactInfo}
     />
   )
