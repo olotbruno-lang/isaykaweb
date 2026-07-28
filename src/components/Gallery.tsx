@@ -10,7 +10,13 @@ export default function Gallery() {
   const [showcaseCategory, setShowcaseCategory] = useState<string | null>(null)
   const gridRef = useRef<HTMLDivElement>(null)
 
+  const getTimestamp = (imagePath: string) => {
+    const match = imagePath.match(/_(\d{13})/);
+    return match ? parseInt(match[1]) : 0;
+  };
+
   const filtered = ARTWORKS.filter(a => a.visible && (filter === 'Tous' || a.category === filter))
+    .sort((a, b) => getTimestamp(b.image) - getTimestamp(a.image))
 
   const showcaseItems: ShowcaseItem[] = showcaseCategory
     ? ARTWORKS.filter(a => a.visible && a.category === showcaseCategory).map(a => ({
