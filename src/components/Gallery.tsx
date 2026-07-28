@@ -73,11 +73,11 @@ export default function Gallery() {
               key={art.id}
               className="artwork-card reveal break-inside-avoid mb-5 relative rounded-xl overflow-hidden cursor-pointer group"
               style={{ transitionDelay: `${(i % 6) * 60}ms` }}
-              onClick={() => setShowcaseCategory(art.category)}
+              onClick={() => setSelected(art)}
               tabIndex={0}
               role="button"
-              aria-label={`Voir la collection ${art.category}`}
-              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setShowcaseCategory(art.category) }}
+              aria-label={`Voir ${art.title}`}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setSelected(art) }}
             >
               <img
                 src={art.image}
