@@ -8,6 +8,7 @@ export default function Gallery() {
   const [filter, setFilter] = useState<Category>('Tous')
   const [selected, setSelected] = useState<Artwork | null>(null)
   const [showcaseCategory, setShowcaseCategory] = useState<string | null>(null)
+  const [selectedShowcaseItemId, setSelectedShowcaseItemId] = useState<number | undefined>(undefined)
   const gridRef = useRef<HTMLDivElement>(null)
 
   const getTimestamp = (imagePath: string) => {
@@ -73,11 +74,11 @@ export default function Gallery() {
               key={art.id}
               className="artwork-card reveal break-inside-avoid mb-5 relative rounded-xl overflow-hidden cursor-pointer group"
               style={{ transitionDelay: `${(i % 6) * 60}ms` }}
-              onClick={() => setSelected(art)}
+              onClick={() => { setShowcaseCategory(art.category); setSelectedShowcaseItemId(art.id); }}
               tabIndex={0}
               role="button"
-              aria-label={`Voir ${art.title}`}
-              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setSelected(art) }}
+              aria-label={`Voir la collection ${art.category}`}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { setShowcaseCategory(art.category); setSelectedShowcaseItemId(art.id); } }}
             >
               <img
                 src={art.image}
@@ -119,7 +120,8 @@ export default function Gallery() {
         items={showcaseItems}
         title={showcaseCategory ?? ''}
         subtitle="Collection"
-        onClose={() => setShowcaseCategory(null)}
+        onClose={() => { setShowcaseCategory(null); setSelectedShowcaseItemId(undefined); }}
+        selectedItemId={selectedShowcaseItemId}
       />
 
       {/* Lightbox — opened from within showcase */}

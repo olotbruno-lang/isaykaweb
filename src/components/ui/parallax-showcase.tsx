@@ -35,6 +35,7 @@ function ParallaxItem({ item, reverse, containerRef }: ParallaxItemProps) {
   return (
     <div
       ref={ref}
+      data-item-id={item.id}
       className={`min-h-screen flex items-center justify-center px-8 md:px-20 gap-12 md:gap-28 flex-col md:flex-row${reverse ? ' md:flex-row-reverse' : ''}`}
     >
       {/* Text */}
@@ -92,10 +93,23 @@ interface ParallaxShowcaseProps {
   title: string
   subtitle?: string
   onClose: () => void
+  selectedItemId?: number
 }
 
-export function ParallaxShowcase({ open, items, title, subtitle, onClose }: ParallaxShowcaseProps) {
+export function ParallaxShowcase({ open, items, title, subtitle, onClose, selectedItemId }: ParallaxShowcaseProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+
+  /* Scroll to selected item when showcase opens */
+  useEffect(() => {
+    if (open && selectedItemId && containerRef.current) {
+      setTimeout(() => {
+        const element = containerRef.current?.querySelector(`[data-item-id="${selectedItemId}"]`);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    }
+  }, [open, selectedItemId])
 
   /* Lock scroll — uses data attr so Lightbox can detect and not double-unlock */
   useEffect(() => {
