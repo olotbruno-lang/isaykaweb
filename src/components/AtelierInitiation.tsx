@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { useReveal } from '@/hooks/useReveal'
 import { ATELIERS } from '@/data/ateliers'
 
 export default function AtelierInitiation() {
+  useReveal()
 
   return (
     <section id="atelier-initiation" className="py-28 bg-[#111009]">
