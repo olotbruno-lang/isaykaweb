@@ -540,7 +540,67 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: true,
     visible: true
   },
+  {
+    id: 74,
+    title: "Cellograff \u2014 Session 1",
+    description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
+    category: "Atelier d'Initiation",
+    technique: "Cellograff",
+    dimensions: null,
+    year: null,
+    image: "/images/atelier_initiation_1_1785404500000.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 75,
+    title: "Cellograff \u2014 Session 2",
+    description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
+    category: "Atelier d'Initiation",
+    technique: "Cellograff",
+    dimensions: null,
+    year: null,
+    image: "/images/atelier_initiation_2_1785404400000.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 76,
+    title: "Cellograff \u2014 Session 3",
+    description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
+    category: "Atelier d'Initiation",
+    technique: "Cellograff",
+    dimensions: null,
+    year: null,
+    image: "/images/atelier_initiation_3_1785404300000.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 77,
+    title: "Cellograff \u2014 Session 4",
+    description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
+    category: "Atelier d'Initiation",
+    technique: "Cellograff",
+    dimensions: null,
+    year: null,
+    image: "/images/atelier_initiation_4_1785404200000.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 78,
+    title: "Cellograff \u2014 Session 5",
+    description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
+    category: "Atelier d'Initiation",
+    technique: "Cellograff",
+    dimensions: null,
+    year: null,
+    image: "/images/atelier_initiation_5_1785404100000.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
-export const CATEGORIES = ['Tous', 'Art Urbain', 'Peintures', 'Pop Art', 'Pop Culture', 'Patrimoine', 'Nature', 'Customisation'] as const
+export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Pop Culture', 'Patrimoine', 'Nature', 'Customisation'] as const
 export type Category = typeof CATEGORIES[number]
