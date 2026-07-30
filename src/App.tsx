@@ -8,6 +8,7 @@ import Gallery from './components/Gallery'
 import Atelier from './components/Atelier'
 import About from './components/About'
 import WhyMe from './components/WhyMe'
+import AtelierInitiation from './components/AtelierInitiation'
 import Commande from './components/Commande'
 import ProjectWorkflow from './components/ProjectWorkflow'
 import Expositions from './components/Expositions'
@@ -28,6 +29,7 @@ function AppContent() {
         <Atelier />
         <About />
         <WhyMe />
+        <AtelierInitiation />
         <Commande />
         <ProjectWorkflow />
         <Expositions />

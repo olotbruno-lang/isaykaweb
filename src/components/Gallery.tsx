@@ -16,7 +16,7 @@ export default function Gallery() {
     return match ? parseInt(match[1]) : 0;
   };
 
-  const filtered = ARTWORKS.filter(a => a.visible && (filter === 'Tous' || a.category === filter))
+  const filtered = ARTWORKS.filter(a => a.visible && (filter === 'Tous' ? a.category !== 'Atelier d\'Initiation' : a.category === filter))
     .sort((a, b) => getTimestamp(b.image) - getTimestamp(a.image))
 
   const showcaseItems: ShowcaseItem[] = showcaseCategory

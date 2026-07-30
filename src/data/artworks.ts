@@ -542,7 +542,7 @@ export const ARTWORKS: Artwork[] = [
   },
   {
     id: 74,
-    title: "Cellograff \u2014 Session 1",
+    title: "Cellograff",
     description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
     category: "Atelier d'Initiation",
     technique: "Cellograff",
@@ -554,7 +554,7 @@ export const ARTWORKS: Artwork[] = [
   },
   {
     id: 75,
-    title: "Cellograff \u2014 Session 2",
+    title: "Cellograff",
     description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
     category: "Atelier d'Initiation",
     technique: "Cellograff",
@@ -566,7 +566,7 @@ export const ARTWORKS: Artwork[] = [
   },
   {
     id: 76,
-    title: "Cellograff \u2014 Session 3",
+    title: "Cellograff",
     description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
     category: "Atelier d'Initiation",
     technique: "Cellograff",
@@ -578,7 +578,7 @@ export const ARTWORKS: Artwork[] = [
   },
   {
     id: 77,
-    title: "Cellograff \u2014 Session 4",
+    title: "Cellograff",
     description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
     category: "Atelier d'Initiation",
     technique: "Cellograff",
@@ -590,7 +590,7 @@ export const ARTWORKS: Artwork[] = [
   },
   {
     id: 78,
-    title: "Cellograff \u2014 Session 5",
+    title: "Cellograff",
     description: "Technique \u00e9ph\u00e9m\u00e8re de cellograff, libert\u00e9 d'expression sur cellophane transparent.",
     category: "Atelier d'Initiation",
     technique: "Cellograff",
