@@ -11,7 +11,7 @@ export default function Atelier() {
             Atelier d'<em className="italic text-[#c8512a]">Initiation</em>
           </h2>
           <p className="text-[0.95rem] text-[#7a7368] leading-[1.9] max-w-xl">
-            Contenu à ajouter
+            Atelier d'initiation avec la technique éphémère de cellograff, pour plus de lâché prise et une total liberté d'expression.
           </p>
         </div>
       </div>
