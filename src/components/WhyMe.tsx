@@ -97,7 +97,7 @@ export default function WhyMe() {
         {/* FAQ */}
         <div className="reveal grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-16 items-start">
           {/* Left label */}
-          <div className="sticky top-28">
+          <div className="sticky top-28 bg-[#111009] pr-4 z-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="w-8 h-px bg-[#c8512a] inline-block" />
               <span className="text-[0.68rem] font-medium tracking-[0.22em] uppercase text-[#c8512a]">Questions fréquentes</span>
