@@ -49,7 +49,7 @@ body::before {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-.masonry { columns: 3; column-gap: 1.2rem; }
+.masonry { columns: 3; column-gap: 1.2rem; column-fill: auto; height: auto; }
 @media (max-width: 1024px) { .masonry { columns: 2; } }
 @media (max-width: 640px) { .masonry { columns: 2; } }
 

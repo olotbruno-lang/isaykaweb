@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useReveal } from '@/hooks/useReveal'
 import { ATELIERS } from '@/data/ateliers'
 
 export default function AtelierInitiation() {
   useReveal()
+  const [selectedAtelier, setSelectedAtelier] = useState<typeof ATELIERS[0] | null>(null)
 
   return (
     <section id="atelier-initiation" className="py-28 bg-[#111009]">
@@ -19,27 +20,33 @@ export default function AtelierInitiation() {
           </h2>
         </div>
 
-        {/* Ateliers */}
-        {ATELIERS.map((atelier) => (
-          <div key={atelier.id} className="mb-20">
-            {/* Atelier Header */}
-            <div className="reveal mb-10">
-              <h3 className="font-display text-3xl font-light mb-3">{atelier.title}</h3>
-              <p className="text-[0.95rem] text-[#7a7368] leading-[1.9] max-w-2xl">
-                {atelier.description}
-              </p>
-            </div>
-
-            {/* Masonry Gallery */}
-            <AtelierGallery images={atelier.images} atelierTitle={atelier.title} />
-          </div>
-        ))}
+        {/* Ateliers — images only */}
+        <div className="space-y-20">
+          {ATELIERS.map((atelier) => (
+            <AtelierGallery
+              key={atelier.id}
+              atelier={atelier}
+              onImageClick={() => setSelectedAtelier(atelier)}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* Modal */}
+      {selectedAtelier && (
+        <AtelierModal atelier={selectedAtelier} onClose={() => setSelectedAtelier(null)} />
+      )}
     </section>
   )
 }
 
-function AtelierGallery({ images, atelierTitle }: { images: string[]; atelierTitle: string }) {
+function AtelierGallery({
+  atelier,
+  onImageClick
+}: {
+  atelier: typeof ATELIERS[0];
+  onImageClick: () => void
+}) {
   const gridRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -52,15 +59,19 @@ function AtelierGallery({ images, atelierTitle }: { images: string[]; atelierTit
 
   return (
     <div className="masonry" ref={gridRef}>
-      {images.map((img, i) => (
+      {atelier.images.map((img, i) => (
         <div
           key={i}
-          className="atelier-card reveal break-inside-avoid mb-5 relative rounded-xl overflow-hidden"
+          className="atelier-card reveal break-inside-avoid mb-5 relative rounded-xl overflow-hidden cursor-pointer group"
           style={{ transitionDelay: `${(i % 6) * 60}ms` }}
+          onClick={onImageClick}
+          role="button"
+          tabIndex={0}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onImageClick() }}
         >
           <img
             src={img}
-            alt={atelierTitle}
+            alt={atelier.title}
             loading="lazy"
             decoding="async"
             className="w-full block transition-all duration-700"
@@ -70,6 +81,66 @@ function AtelierGallery({ images, atelierTitle }: { images: string[]; atelierTit
           />
         </div>
       ))}
+    </div>
+  )
+}
+
+function AtelierModal({
+  atelier,
+  onClose
+}: {
+  atelier: typeof ATELIERS[0];
+  onClose: () => void
+}) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="bg-[#111009] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/[0.06]"
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="p-8 md:p-12">
+          {/* Header */}
+          <div className="flex items-start justify-between gap-4 mb-8">
+            <div>
+              <h3 className="font-display text-3xl md:text-4xl font-light mb-3">{atelier.title}</h3>
+              <p className="text-[0.95rem] text-[#7a7368] leading-[1.9]">
+                {atelier.description}
+              </p>
+            </div>
+            <button
+              onClick={onClose}
+              className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-white/[0.12] text-white hover:bg-white/[0.08] transition-colors text-xl"
+              aria-label="Fermer"
+            >
+              ×
+            </button>
+          </div>
+
+          {/* Images gallery */}
+          <div className="masonry">
+            {atelier.images.map((img, i) => (
+              <div key={i} className="break-inside-avoid mb-5 rounded-lg overflow-hidden">
+                <img
+                  src={img}
+                  alt={`${atelier.title} - image ${i + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto block"
+                  style={{ filter: 'saturate(0.85)' }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
