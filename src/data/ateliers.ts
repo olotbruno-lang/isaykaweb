@@ -23,11 +23,11 @@ export const ATELIERS: Atelier[] = [
     title: 'Petits Supports',
     description: 'Initiation sur des petits supports, bombes de peinture, pots, cartons entoilés… idéale pour ramener un souvenir à la maison !',
     images: [
-      '/images/atelier_petits_supports_1_1785404600000.jpeg',
-      '/images/atelier_petits_supports_2_1785404610000.jpeg',
-      '/images/atelier_petits_supports_3_1785404620000.jpeg',
-      '/images/atelier_petits_supports_4_1785404630000.jpeg',
-      '/images/atelier_petits_supports_5_1785404640000.jpeg',
+      '/images/atelier_petits_supports_real_1.jpeg',
+      '/images/atelier_petits_supports_real_2.jpeg',
+      '/images/atelier_petits_supports_real_3.jpeg',
+      '/images/atelier_petits_supports_real_4.jpeg',
+      '/images/atelier_petits_supports_real_5.jpeg',
     ],
   },
 ]
