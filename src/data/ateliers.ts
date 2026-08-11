@@ -30,4 +30,16 @@ export const ATELIERS: Atelier[] = [
       '/images/atelier_petits_supports_real_5.jpeg',
     ],
   },
+  {
+    id: 3,
+    title: 'Aérosol',
+    description: 'Utilisation de l\'aérosol, travail sur les techniques de base, les couleurs et les effets de mouvements.',
+    images: [
+      '/images/atelier_aerosol_1.jpeg',
+      '/images/atelier_aerosol_2.jpeg',
+      '/images/atelier_aerosol_3.jpeg',
+      '/images/atelier_aerosol_4.jpeg',
+      '/images/atelier_aerosol_5.jpeg',
+    ],
+  },
 ]
