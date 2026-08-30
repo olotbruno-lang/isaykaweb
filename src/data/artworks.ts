@@ -85,18 +85,6 @@ export const ARTWORKS: Artwork[] = [
     visible: true
   },
   {
-    id: 16,
-    title: "S\u00e9rie Color\u00e9e",
-    description: "Explosion de couleurs dans une composition unique",
-    category: "Peintures",
-    technique: null,
-    dimensions: null,
-    year: null,
-    image: "/images/fda4acb1-87b0-4544-97a4-e79064cb30ff_1758287584536.jpeg",
-    isAvailable: true,
-    visible: true
-  },
-  {
     id: 17,
     title: "Nature Urbaine",
     description: "Fusion entre \u00e9l\u00e9ments naturels et urbains",
