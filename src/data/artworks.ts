@@ -28,7 +28,7 @@ export const ARTWORKS: Artwork[] = [
     id: 6,
     title: "Mon Peintre Totoro",
     description: "Hommage \u00e0 l'univers de Studio Ghibli",
-    category: "Pop Culture",
+    category: "Pop Art",
     technique: null,
     dimensions: "30x24cm",
     year: null,
@@ -602,5 +602,5 @@ export const ARTWORKS: Artwork[] = [
   },
 ]
 
-export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Pop Culture', 'Patrimoine', 'Nature', 'Customisation'] as const
+export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation'] as const
 export type Category = typeof CATEGORIES[number]
