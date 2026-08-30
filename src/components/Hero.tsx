@@ -54,7 +54,7 @@ export default function Hero() {
           <span className="block font-body text-[0.15em] font-medium tracking-[0.22em] uppercase text-[#c8512a] mt-1 leading-none">Artiste Peintre · Var · PACA</span>
         </>
       }
-      subtitle="Fresques murales, peintures, céramiques et mixed media — une œuvre ancrée dans le sud, entre graffs et galerie."
+      subtitle="Peinture, fresque murales, customisations et collaboration. Un univers ancrée dans le sud entre street art et art traditionnel."
       callToAction={{ text: 'Voir la galerie', href: '#gallery' }}
       secondaryAction={{ text: 'Commande sur mesure', href: '#commande' }}
       backgroundImages={CAROUSEL_IMAGES}
