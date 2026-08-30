@@ -103,25 +103,25 @@ function AtelierModal({
       onClick={onClose}
     >
       <div
-        className="bg-[#111009] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/[0.06]"
+        className="bg-[#111009] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/[0.06] relative"
         onClick={e => e.stopPropagation()}
       >
-        <div className="p-8 md:p-12">
+        <div className="p-6 md:p-12">
+          {/* Close button — fixed position on mobile */}
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 md:static md:flex-shrink-0 md:w-10 md:h-10 w-12 h-12 flex items-center justify-center rounded-full border border-white/[0.12] text-white hover:bg-white/[0.08] transition-colors text-2xl md:text-xl z-10"
+            aria-label="Fermer"
+          >
+            ×
+          </button>
+
           {/* Header */}
-          <div className="flex items-start justify-between gap-4 mb-8">
-            <div>
-              <h3 className="font-display text-3xl md:text-4xl font-light mb-3">{atelier.title}</h3>
-              <p className="text-[0.95rem] text-[#7a7368] leading-[1.9]">
-                {atelier.description}
-              </p>
-            </div>
-            <button
-              onClick={onClose}
-              className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-white/[0.12] text-white hover:bg-white/[0.08] transition-colors text-xl"
-              aria-label="Fermer"
-            >
-              ×
-            </button>
+          <div className="mb-8 pr-14 md:pr-0">
+            <h3 className="font-display text-3xl md:text-4xl font-light mb-3">{atelier.title}</h3>
+            <p className="text-[0.95rem] text-[#7a7368] leading-[1.9]">
+              {atelier.description}
+            </p>
           </div>
 
           {/* Images gallery */}
