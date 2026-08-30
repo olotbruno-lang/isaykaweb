@@ -602,5 +602,5 @@ export const ARTWORKS: Artwork[] = [
   },
 ]
 
-export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation'] as const
+export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie'] as const
 export type Category = typeof CATEGORIES[number]
