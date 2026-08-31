@@ -624,6 +624,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: true,
     visible: true
   },
+  {
+    id: 82,
+    title: "Jusqu'à l'amour!",
+    description: "Œuvre unique à la fois vibrante et poétique.",
+    category: "Pop Art",
+    technique: null,
+    dimensions: "50x50cm",
+    year: null,
+    image: "/images/jusqu_amour_1788188643.jpeg",
+    isAvailable: false,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
