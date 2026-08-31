@@ -153,7 +153,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: null,
     year: null,
     image: "/images/img_4254_1758287584537.jpeg",
-    isAvailable: false,
+    isAvailable: true,
     visible: true
   },
   {
