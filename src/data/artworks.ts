@@ -588,6 +588,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 79,
+    title: "Lover",
+    description: "Une ambiance chaleureuse qui donne le sourire!",
+    category: "Pop Art",
+    technique: null,
+    dimensions: "40x40cm",
+    year: null,
+    image: "/images/lover_placeholder.jpeg",
+    isAvailable: true,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
