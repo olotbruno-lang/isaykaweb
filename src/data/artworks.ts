@@ -636,6 +636,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: false,
     visible: true
   },
+  {
+    id: 83,
+    title: "Fresque Régusse",
+    description: "Fresque intérieur dans un snack à Régusse.",
+    category: "Fresque",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/fresque_regusse_1788189027.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
