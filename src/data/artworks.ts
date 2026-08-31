@@ -648,6 +648,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 84,
+    title: "Terrasse et Jardin",
+    description: "Personnalisation du store d'une pizzeria à Flayosc.",
+    category: "Customisation",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/terrasse_jardin_1788190131.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
