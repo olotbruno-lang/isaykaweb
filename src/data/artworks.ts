@@ -612,6 +612,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: false,
     visible: true
   },
+  {
+    id: 81,
+    title: "Pleine Lune",
+    description: "Couleurs froides et regard captivant.",
+    category: "Nature",
+    technique: null,
+    dimensions: "60x80cm",
+    year: null,
+    image: "/images/pleine_lune_1788188614.jpeg",
+    isAvailable: true,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
