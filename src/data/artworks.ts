@@ -600,6 +600,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: true,
     visible: true
   },
+  {
+    id: 80,
+    title: "Hors Cadre",
+    description: "Tableau hors cadre mêlant graff et messages poétiques.",
+    category: "Art Urbain",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/hors_cadre_graff_poesie_1788188588.jpeg",
+    isAvailable: false,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
