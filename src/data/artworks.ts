@@ -668,7 +668,7 @@ export const ARTWORKS: Artwork[] = [
     technique: null,
     dimensions: null,
     year: null,
-    image: "/images/fresque_cousteau_1788190226.jpeg",
+    image: "/images/fresque_cousteau_new_1788191051.jpeg",
     isAvailable: null,
     visible: true
   },
