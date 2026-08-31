@@ -644,7 +644,7 @@ export const ARTWORKS: Artwork[] = [
     technique: null,
     dimensions: null,
     year: null,
-    image: "/images/fresque_regusse_1788189027.jpeg",
+    image: "/images/fresque_regusse_new_1788191120.jpeg",
     isAvailable: null,
     visible: true
   },
