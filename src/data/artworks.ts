@@ -672,6 +672,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 86,
+    title: "Far breton",
+    description: "De la positivité à travers un style plus sobre.",
+    category: "Pop Art",
+    technique: null,
+    dimensions: "30x40cm",
+    year: null,
+    image: "/images/far_breton_1788191015.jpeg",
+    isAvailable: true,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
