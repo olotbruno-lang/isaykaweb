@@ -21,7 +21,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: "15x30cm",
     year: null,
     image: "/images/img_4230_1758294541954.jpeg",
-    isAvailable: true,
+    isAvailable: false,
     visible: true
   },
   {
@@ -105,7 +105,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: null,
     year: null,
     image: "/images/img_4217_1758287584537.jpeg",
-    isAvailable: null,
+    isAvailable: false,
     visible: true
   },
   {
@@ -117,7 +117,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: null,
     year: null,
     image: "/images/img_4246_1758287584537.jpeg",
-    isAvailable: true,
+    isAvailable: false,
     visible: true
   },
   {
@@ -429,7 +429,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: "15x30cm",
     year: null,
     image: "/images/img_0328_1770824355354.jpeg",
-    isAvailable: true,
+    isAvailable: false,
     visible: true
   },
   {
@@ -477,7 +477,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: "55x46cm",
     year: null,
     image: "/images/img_0519_1770827672686.jpeg",
-    isAvailable: true,
+    isAvailable: false,
     visible: true
   },
   {
@@ -501,7 +501,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: "40x30cm",
     year: null,
     image: "/images/img_9235_1779789235259.jpeg",
-    isAvailable: true,
+    isAvailable: false,
     visible: true
   },
   {
