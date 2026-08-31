@@ -660,6 +660,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 85,
+    title: "Fresque Cousteau",
+    description: "Immense fresque sur la diversité et le bien-être au collège Jacques Yves Cousteau à La Garde.",
+    category: "Fresque",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/fresque_cousteau_1788190226.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
