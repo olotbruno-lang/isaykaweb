@@ -685,18 +685,6 @@ export const ARTWORKS: Artwork[] = [
     visible: true
   },
   {
-    id: 87,
-    title: "Fresque Régusse",
-    description: "Fresque intérieur dans un snack à Régusse.",
-    category: "Fresque",
-    technique: null,
-    dimensions: null,
-    year: null,
-    image: "/images/fresque_regusse_1789636962.jpeg",
-    isAvailable: null,
-    visible: true
-  },
-  {
     id: 88,
     title: "Salle de sport",
     description: "Peinture à l'aérosol pour dynamiser et sublimer une salle de sport.",
