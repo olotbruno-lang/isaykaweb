@@ -36,7 +36,7 @@ function ParallaxItem({ item, reverse, containerRef }: ParallaxItemProps) {
     <div
       ref={ref}
       data-item-id={item.id}
-      className={`min-h-screen flex items-center justify-center px-8 md:px-20 gap-12 md:gap-28 flex-col md:flex-row${reverse ? ' md:flex-row-reverse' : ''}`}
+      className={`min-h-screen flex items-center justify-center px-8 md:px-20 gap-12 md:gap-28 flex-col md:flex-row snap-start snap-always${reverse ? ' md:flex-row-reverse' : ''}`}
     >
       {/* Text */}
       <motion.div style={{ y }} className="flex-1 max-w-sm w-full">
@@ -171,7 +171,7 @@ export function ParallaxShowcase({ open, items, title, subtitle, onClose, select
           </div>
 
           {/* Scrollable parallax content */}
-          <div ref={containerRef} className="flex-1 overflow-y-auto">
+          <div ref={containerRef} className="flex-1 overflow-y-auto snap-y snap-mandatory">
             {items.length === 0 ? (
               <div className="min-h-screen flex items-center justify-center text-[#7a7368]">Aucun élément</div>
             ) : (

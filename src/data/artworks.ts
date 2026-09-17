@@ -489,7 +489,7 @@ export const ARTWORKS: Artwork[] = [
     dimensions: "60x80cm",
     year: null,
     image: "/images/img_9943_1779788994677.jpeg",
-    isAvailable: true,
+    isAvailable: false,
     visible: true
   },
   {
@@ -680,7 +680,7 @@ export const ARTWORKS: Artwork[] = [
     technique: null,
     dimensions: "30x40cm",
     year: null,
-    image: "/images/far_breton_1788191015.jpeg",
+    image: "/images/far_breton_1789658455.jpeg",
     isAvailable: true,
     visible: true
   },
@@ -696,7 +696,43 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 89,
+    title: "On the Wall",
+    description: "Mixte entre couleurs vibrantes et graffitis, œuvre réalisée en live painting.",
+    category: "Art Urbain",
+    technique: null,
+    dimensions: "80x80cm",
+    year: null,
+    image: "/images/on_the_wall_1789666222.jpeg",
+    isAvailable: true,
+    visible: true
+  },
+  {
+    id: 90,
+    title: "Beyond the Clouds",
+    description: "Une œuvre où l'imaginaire fait la rencontre du street art.",
+    category: "Art Urbain",
+    technique: null,
+    dimensions: "80x80cm",
+    year: null,
+    image: "/images/beyond_the_clouds_1789666321.jpeg",
+    isAvailable: true,
+    visible: true
+  },
+  {
+    id: 91,
+    title: "Fresque Mam",
+    description: "Une fresque pour ensoleiller une Mam.",
+    category: "Fresque",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/fresque_mam_1789666374.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
-export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
+export const CATEGORIES = ['Tous', 'Art Urbain', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
 export type Category = typeof CATEGORIES[number]
