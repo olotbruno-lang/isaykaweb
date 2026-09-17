@@ -696,6 +696,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 88,
+    title: "Salle de sport",
+    description: "Peinture à l'aérosol pour dynamiser et sublimer une salle de sport.",
+    category: "Customisation",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/salle_sport_1789638070.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Atelier d\'Initiation', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
