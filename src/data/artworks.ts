@@ -656,7 +656,7 @@ export const ARTWORKS: Artwork[] = [
     technique: null,
     dimensions: null,
     year: null,
-    image: "/images/terrasse_jardin_1788190131.jpeg",
+    image: "/images/terrasse_jardin_1789637588.jpeg",
     isAvailable: null,
     visible: true
   },
