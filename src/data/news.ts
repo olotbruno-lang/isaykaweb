@@ -82,16 +82,6 @@ export const NEWS: NewsItem[] = [
     section: 'expo',
   },
   {
-    id: 8,
-    title: "Session Live Painting à Nice pour un oral",
-    description: "Session de live painting réalisée à Nice dans le cadre d'un oral.",
-    image: "/images/news/live-painting-nice-oral-2.jpeg",
-    eventDate: null,
-    location: "Nice",
-    badge: "Live Painting",
-    section: 'expo',
-  },
-  {
     id: 3,
     title: "Participation au Numa Festival à Nice",
     description: "Fresque réalisée dans l'enceinte du 109 à Nice à l'occasion du Numa Festival, réunissant plus de 40 street artistes internationaux. Organisé par Otom.",
