@@ -22,16 +22,6 @@ export const NEWS: NewsItem[] = [
     section: 'expo',
   },
   {
-    id: 11,
-    title: "Exposition à Sainte Anastasie sur Issole avec Daniele Robbiani",
-    description: "« Langages du monde », édition inaugurale de la biennale d'art contemporain Escales d'Art en Centre Var, avec Daniele Robbiani en invité d'honneur. Performance plastique à 6 mains avec Daniele Robbiani, Marie Laure Suzzoni et Isayka, dimanche 20 septembre à 16h.",
-    image: "/images/news/exposition-vernissage-1789667593.jpeg",
-    eventDate: "2026-09-11",
-    location: "Espace Culturel Albert Garnier, Rue Notre Dame, Sainte Anastasie sur Issole (83136)",
-    badge: "Exposition",
-    section: 'news',
-  },
-  {
     id: 7,
     title: "Exposition Origines",
     description: "Une exposition hors du temps en Côtes-d'Armor, où les origines seront transmises à travers un style unique. Vernissage mardi 16 Juin à 18h.",
