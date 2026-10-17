@@ -732,6 +732,30 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 92,
+    title: "Food Truck",
+    description: "Carrosserie d'un food truck décorée de graff et de fruits et légumes.",
+    category: "Carosserie",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/carrosserie_1792250818.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 93,
+    title: "Carrosserie Japon",
+    description: "Capot décoré d'un paysage japonais : mont Fuji, torii et cerisiers en fleurs.",
+    category: "Carosserie",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/carrosserie_japon_1792250834.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
