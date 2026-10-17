@@ -11,13 +11,8 @@ export default function Gallery() {
   const [selectedShowcaseItemId, setSelectedShowcaseItemId] = useState<number | undefined>(undefined)
   const gridRef = useRef<HTMLDivElement>(null)
 
-  const getTimestamp = (imagePath: string) => {
-    const match = imagePath.match(/_(\d{13})/);
-    return match ? parseInt(match[1]) : 0;
-  };
-
   const filtered = ARTWORKS.filter(a => a.visible && a.category !== 'Atelier d\'Initiation' && (filter === 'Tous' || a.category === filter))
-    .sort((a, b) => getTimestamp(b.image) - getTimestamp(a.image))
+    .sort((a, b) => b.id - a.id)
 
   const showcaseItems: ShowcaseItem[] = showcaseCategory
     ? ARTWORKS.filter(a => a.visible && a.category === showcaseCategory).map(a => ({
