@@ -110,8 +110,8 @@ export const ARTWORKS: Artwork[] = [
   },
   {
     id: 26,
-    title: "\u0152uvre Monumentale",
-    description: "Grande r\u00e9alisation artistique murale",
+    title: "Le cam\u00e9l\u00e9on",
+    description: "Tableau 20X20 : vendu : r\u00e9alisation noir et blanc sur fond color\u00e9",
     category: "Art Urbain",
     technique: null,
     dimensions: null,
