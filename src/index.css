@@ -214,6 +214,14 @@ section:not(#hero) {
   color: #f0ebe3;
 }
 
+.nav-logo {
+  filter: invert(1);
+}
+
+[data-theme="light"] .nav-logo {
+  filter: none;
+}
+
 [data-theme="light"] .artwork-card .text-\[\#7a7368\] {
   color: #7a7368 !important;
 }

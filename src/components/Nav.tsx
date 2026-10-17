@@ -53,7 +53,7 @@ export default function Nav() {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-8 md:px-12 transition-all duration-500 ${scrolled ? 'py-4 bg-[rgba(12,11,9,0.94)] backdrop-blur-xl border-b border-white/[0.06]' : 'py-6'}`}>
-        <a href="#hero" className="font-sign text-3xl text-[#f0ebe3]">Isayka</a>
+        <a href="#hero" className="block"><img src="/images/logo-isayka.png" alt="Isayka" className="nav-logo h-9 w-auto" /></a>
 
         <div className="hidden md:block">
           <NavHeader />
