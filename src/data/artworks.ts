@@ -598,7 +598,7 @@ export const ARTWORKS: Artwork[] = [
     year: null,
     image: "/images/lover_placeholder.jpeg",
     isAvailable: true,
-    visible: true
+    visible: false
   },
   {
     id: 80,
