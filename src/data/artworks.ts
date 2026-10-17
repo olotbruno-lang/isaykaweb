@@ -756,6 +756,18 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 94,
+    title: "Escalier Jacques Prévert",
+    description: "Customisation d'un escalier au Collège Jacques Prévert aux Arcs, Draguignan.",
+    category: "Customisation",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/customisation_escalier_1792253179.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
 export const CATEGORIES = ['Tous', 'Art Urbain', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
