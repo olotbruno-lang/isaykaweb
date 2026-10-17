@@ -768,7 +768,67 @@ export const ARTWORKS: Artwork[] = [
     isAvailable: null,
     visible: true
   },
+  {
+    id: 95,
+    title: "Portrait Octobre Rose",
+    description: "Tableau créé pour Octobre Rose.",
+    category: "Octobre Rose",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/octobre_rose_1_1792262581.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 96,
+    title: "Grenouille Rose",
+    description: "Tableau créé pour Octobre Rose.",
+    category: "Octobre Rose",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/octobre_rose_2_1792262581.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 97,
+    title: "Every woman is unique",
+    description: "Tableau créé pour Octobre Rose.",
+    category: "Octobre Rose",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/octobre_rose_3_1792262581.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 98,
+    title: "Rose ailée",
+    description: "Tableau créé pour Octobre Rose.",
+    category: "Octobre Rose",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/octobre_rose_4_1792262581.jpeg",
+    isAvailable: null,
+    visible: true
+  },
+  {
+    id: 99,
+    title: "La vie en rose",
+    description: "Tableau créé pour Octobre Rose.",
+    category: "Octobre Rose",
+    technique: null,
+    dimensions: null,
+    year: null,
+    image: "/images/octobre_rose_5_1792262581.jpeg",
+    isAvailable: null,
+    visible: true
+  },
 ]
 
-export const CATEGORIES = ['Tous', 'Art Urbain', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque'] as const
+export const CATEGORIES = ['Tous', 'Art Urbain', 'Peintures', 'Pop Art', 'Patrimoine', 'Nature', 'Customisation', 'Carosserie', 'Fresque', 'Octobre Rose'] as const
 export type Category = typeof CATEGORIES[number]
