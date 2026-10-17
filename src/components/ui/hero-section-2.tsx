@@ -196,8 +196,8 @@ const HeroSection2 = React.forwardRef<HTMLElement, HeroSection2Props>(
       </motion.div>
 
       {/* Gradient fade — seam between panels (desktop only) */}
-      <div className="absolute top-0 right-[40%] bottom-0 w-28 z-[1] hidden lg:block pointer-events-none" style={{ background: 'linear-gradient(to right, var(--bg), transparent)' }} />
-      <div className="absolute top-0 right-[50%] bottom-0 w-28 z-[1] hidden md:block lg:hidden pointer-events-none" style={{ background: 'linear-gradient(to right, var(--bg), transparent)' }} />
+      <div className="hero-fade absolute top-0 right-[40%] bottom-0 w-28 z-[1] hidden lg:block pointer-events-none" style={{ background: 'linear-gradient(to right, var(--bg), transparent)' }} />
+      <div className="hero-fade absolute top-0 right-[50%] bottom-0 w-28 z-[1] hidden md:block lg:hidden pointer-events-none" style={{ background: 'linear-gradient(to right, var(--bg), transparent)' }} />
     </motion.section>
   )
   }

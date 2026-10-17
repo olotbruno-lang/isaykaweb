@@ -226,6 +226,10 @@ section:not(#hero) {
   color: #7a7368 !important;
 }
 
+[data-theme="light"] .hero-fade {
+  display: none;
+}
+
 [data-theme="light"] #hero footer {
   background-color: transparent !important;
 }
