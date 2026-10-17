@@ -34,7 +34,7 @@ const PILLARS = [
 
 const FAQ = [
   {
-    q: 'Qui est Isayka Draw ?',
+    q: 'Qui est Isayka ?',
     a: 'Je m\'appelle Arnaud Cariou, alias Isayka Draw. Mon univers navigue entre art urbain et pratique d\'atelier — une approche singulière qui emprunte autant à la culture street art qu\'aux traditions picturales. Ma pratique s\'étend de la toile au mur, de l\'intime au monumental.',
   },
   {
