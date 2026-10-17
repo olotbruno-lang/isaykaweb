@@ -80,8 +80,8 @@ section:not(#hero) {
 
 /* ── Light Theme ───────────────────────────────────────────────── */
 [data-theme="light"] {
-  --bg: #FE98C7;
-  --bg2: #FE98C7;
+  --bg: #f5f0e8;
+  --bg2: #ede8dc;
   --surface: #faf7f0;
   --surface2: #fff9f4;
   --border: rgba(0,0,0,0.08);
@@ -199,11 +199,15 @@ section:not(#hero) {
 }
 
 [data-theme="light"] .bg-\[rgba\(12\,11\,9\,0\.94\)\] {
-  background-color: rgba(254,152,199,0.95) !important;
+  background-color: rgba(245,240,232,0.95) !important;
 }
 
 [data-theme="light"] .bg-\[rgba\(12\,11\,9\,0\.97\)\] {
-  background-color: rgba(254,152,199,0.97) !important;
+  background-color: rgba(245,240,232,0.97) !important;
+}
+
+[data-theme="light"] #hero {
+  background-color: #FE98C7 !important;
 }
 
 /* ParallaxShowcase visibility in light mode */
