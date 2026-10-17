@@ -210,6 +210,14 @@ section:not(#hero) {
   background-color: #FE98C7 !important;
 }
 
+[data-theme="light"] .artwork-card {
+  color: #f0ebe3;
+}
+
+[data-theme="light"] .artwork-card .text-\[\#7a7368\] {
+  color: #7a7368 !important;
+}
+
 [data-theme="light"] #hero footer {
   background-color: transparent !important;
 }
