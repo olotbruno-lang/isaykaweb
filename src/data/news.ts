@@ -12,6 +12,16 @@ export interface NewsItem {
 
 export const NEWS: NewsItem[] = [
   {
+    id: 12,
+    title: "Performance artistique à 6 mains",
+    description: "Live painting partagé avec Marie-Laure Suzzoni et l’invité d’honneur Daniele Robbiani, à St Anastasie sur Issole.",
+    image: "/images/news/news-performance-1792252983.jpg",
+    eventDate: "2026-09-20",
+    location: "Espace Culturel Albert Garnier, Rue Notre Dame, Sainte Anastasie sur Issole (83136)",
+    badge: "Live Painting",
+    section: 'news',
+  },
+  {
     id: 10,
     title: "Exposition à Sainte Anastasie sur Issole avec Daniele Robbiani",
     description: "« Langages du monde », édition inaugurale de la biennale d'art contemporain Escales d'Art en Centre Var, avec Daniele Robbiani en invité d'honneur. Performance plastique à 6 mains avec Daniele Robbiani, Marie Laure Suzzoni et Isayka, dimanche 20 septembre à 16h.",
