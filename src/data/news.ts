@@ -12,6 +12,16 @@ export interface NewsItem {
 
 export const NEWS: NewsItem[] = [
   {
+    id: 13,
+    title: "Exposition Édition Octobre Rose",
+    description: "Vernissage dimanche 25 octobre à 18h. Exposition du 25 au 31 octobre, de 10h à 12h et de 15h à 18h.",
+    image: "/images/news/expo-octobre-rose-1792262900.jpeg",
+    eventDate: "2026-10-25",
+    location: "Galerie 83, 83780 Flayosc",
+    badge: "Exposition",
+    section: 'expo',
+  },
+  {
     id: 12,
     title: "Performance artistique à 6 mains",
     description: "Live painting partagé avec Marie-Laure Suzzoni et l’invité d’honneur Daniele Robbiani, à St Anastasie sur Issole.",
